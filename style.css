@@ -1,0 +1,253 @@
+:root {
+  --color-text-primary: #cccccc;
+  --color-text-secondary: #666666;
+  --color-bg: #161616;
+  --color-bg-secondary: rgba(77, 80, 84, 1);
+  --logo-color: white;
+  --accent-color: #1c1c1c;
+  --cta-color: #dd2e44;
+  --shadow: rgba(0, 0, 0, 0.35) 0px 4px 8px 0px;
+  --border: 15px;
+}
+
+@media (min-width: 300px) {
+  :root {
+    --scale: 0.8;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --scale: 1;
+  }
+}
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+  section {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  #menu {
+    display: none;
+  }
+  section {
+    width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    --scale: 1.1;
+  }
+  section {
+    width: 70%;
+  }
+}
+html {
+  box-sizing: border-box;
+  background-color: var(--accent-color);
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  word-wrap: break-word;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--accent-color);
+}
+footer,
+header,
+header div,
+nav {
+  min-height: 4rem;
+  background-color: var(--accent-color);
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+header {
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header > div {
+  max-width: 90rem;
+}
+main {
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  background-color: var(--color-bg);
+}
+a {
+  color: var(--cta-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+img {
+  max-width: calc(200px * var(--scale));
+  margin: 3rem auto;
+}
+.form-row input,
+button {
+  border-radius: 0.5rem;
+  height: 35px;
+  margin: 0.4rem;
+  padding: 0 0.5rem;
+  box-shadow: var(--shadow);
+}
+input {
+  border: 1px solid var(--color-text-secondary);
+}
+button.primary {
+  width: 200px;
+  margin: 0.4rem auto;
+  font-weight: 600;
+  border: 1px solid var(--cta-color);
+  color: var(--logo-color);
+  cursor: pointer;
+  background-color: var(--cta-color);
+}
+#logo {
+  margin: 0 2rem;
+  font-size: calc(24px * var(--scale));
+  font-weight: 600;
+  color: var(--cta-color);
+  justify-content: flex-start;
+}
+#logo img {
+  max-height: 2rem;
+  margin: 0 1rem 0 0;
+}
+nav ul {
+  width: 100%;
+  margin: 0;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style-type: none;
+  margin: 0 2rem;
+}
+nav ul li a {
+  color: var(--logo-color);
+}
+.flex {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.col {
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+.grid-item {
+  background-color: var(--accent-color);
+  padding: 1rem;
+  border-radius: var(--border);
+  box-shadow: var(--shadow);
+  color: var(--color-text-secondary);
+}
+div.price {
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  justify-content: space-between;
+}
+@media (max-width: 375px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(70vw, 1fr));
+  }
+  div.price {
+    padding: 1rem;
+  }
+}
+@media (min-width: 376px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  div.price {
+    padding: 3rem;
+  }
+}
+section {
+  margin: 0 auto;
+  max-width: 65rem;
+}
+section#features,
+section#pricing {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#error-message {
+  text-align: center;
+  font-size: 0.9rem;
+  color: red;
+}
+section.hero {
+  padding: 6rem 0;
+  min-height: 20vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section.hero h1 {
+  font-size: calc(42px * var(--scale));
+  margin: 0;
+}
+.cta {
+  padding: 6rem 0 1rem 0;
+  text-align: center;
+  margin: 2rem auto;
+}
+.bio {
+  text-align: left;
+}
+.bio-copy {
+  color: var(--color-text-secondary);
+}
+h2 {
+  font-size: calc(26px * var(--scale));
+  margin: 0;
+}
+h3 {
+  font-size: calc(20px * var(--scale));
+  margin: 0;
+}
+span.value {
+  font-size: calc(26px * var(--scale));
+  color: var(--accent-color);
+  font-weight: 800;
+  margin: 2rem;
+  display: block;
+}
+hr {
+  width: 90%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+code {
+  font-size: 0.9rem;
+  padding: 0 0.3rem;
+  color: var(--color-text-secondary);
+}
+footer {
+  margin: 3rem auto;
+  max-width: 90%;
+  color: var(--logo-color);
+  font-size: 16px;
+  text-align: center;
+}
